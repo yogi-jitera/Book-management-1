@@ -9,6 +9,8 @@ router.get('/books/search', bookController.searchBooks);
 router.get('/books/:id', bookController.getBookById);
 router.put('/books/:id', bookController.updateBook);
 
+// Added PATCH route for partial update
+router.patch('/books/:id', bookController.patchBook);
 
 router.delete('/books/:id', bookController.deleteBook);
 
