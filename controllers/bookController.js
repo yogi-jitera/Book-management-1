@@ -8,7 +8,7 @@ exports.createBook = async (req, res) => {
         res.status(400).json({ error: error.message });
     }
 };
-
+//update comment
 exports.getAllBooks = async (req, res) => {
     const books = await bookService.getAllBooks();
     res.json(books);
