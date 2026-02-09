@@ -1,5 +1,5 @@
 const mongoose = require('../config/db');
-
+//Comment from user
 const readerSchema = new mongoose.Schema({
     name: { type: String, required: true },
     contactInfo: { type: String, required: true },
