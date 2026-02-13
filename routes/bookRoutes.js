@@ -12,9 +12,9 @@ router.put('/books/:id', bookController.updateBook);
 router.patch('/books/:id', bookController.patchBook);
 
 
-// router.patch('/books/:user', bookController.patchBooksByUser);
+router.patch('/books/:user', bookController.patchBooksByUser);
 
-// router.delete('/books/:id', bookController.deleteBook);
+router.delete('/books/:id', bookController.deleteBook);
 
 module.exports = router;
 
