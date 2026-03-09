@@ -1,5 +1,5 @@
 const mongoose = require('../config/db');
-
+//Comment by User
 const userSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
