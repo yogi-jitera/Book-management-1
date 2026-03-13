@@ -18,21 +18,21 @@ exports.getAllBooks = async () => {
 
 exports.getBookById = async (bookId) => {
     const book = await Book.findById(bookId);
-    if (!book) throw new Error('Book not found');
+    if (!book) throw new Error('Book are not available in our list');
     return book;
 };
 
 exports.updateBook = async (bookId, updateData) => {
     validateBookData(updateData);
     const book = await Book.findByIdAndUpdate(bookId, updateData, { new: true, runValidators: true });
-    if (!book) throw new Error('Book not found');
+    if (!book) throw new Error('Book are not available in our list');
     return book;
 };
 
 exports.patchBook = async (bookId, updateData) => {
     // Find existing book
     const book = await Book.findById(bookId);
-    if (!book) throw new Error('Book not found');
+    if (!book) throw new Error('Book are not available in our list');
 
     // Validate only present fields
     if (updateData.hasOwnProperty('publishedYear')) {
@@ -53,6 +53,6 @@ exports.patchBook = async (bookId, updateData) => {
 
 exports.deleteBook = async (bookId) => {
     const book = await Book.findByIdAndDelete(bookId);
-    if (!book) throw new Error('Book not found');
+    if (!book) throw new Error('Book are not available in our list');
     return { message: 'Book deleted successfully' };
 };
